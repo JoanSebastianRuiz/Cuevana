@@ -12,8 +12,11 @@
     <header class="header header_Index">
         <span>
             <a class="boton inicio" href="index.html"><i class="fa-solid fa-house"></i></i></a>
-            <input class="input" type="text">
-            <button class="boton buscar"><i class="fa-solid fa-magnifying-glass"></i></button>
+            <form action="" id="form">
+                <input class="input" type="text">
+                <button class="boton buscar"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+            
         </span>
         <button class="boton carritoCompras"><i class="fa-solid fa-cart-shopping"></i></button>
     </header>
@@ -22,20 +25,19 @@
         <h1 class="texto titulo">Home Theatre</h1>
 
         <section class="cartelera">
-            <h2 class="texto subtitulo">Estrenos</h2>
+            <h2 class="texto subtitulo">Premier</h2>
             <ul class="peliculasCartelera"></ul>
         </section>
 
         <section class="popular">
-            <h2 class="texto subtitulo">Populares</h2>
-            <span>
+            <h2 class="texto subtitulo subtituloPopulares">Popular</h2>
+            <span>  
                 <button class="boton anterior anteriorPopular"><i class="fa-solid fa-circle-chevron-left"></i></button>
                 <ul class="peliculasPopular"></ul>
                 <button class="boton siguiente siguientePopular"><i class="fa-solid fa-circle-chevron-right"></i></button>
             </span>
         </section>
     </main>
-
 
     <script src="js/main.js"></script>
 </body>
