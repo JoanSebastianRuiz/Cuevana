@@ -44,6 +44,12 @@ body{
     gap: 1rem;
 }
 
+.header form{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
 .inicio{
     font-size: 1.7rem;
 }
@@ -203,7 +209,6 @@ main{
     background-color: rgb(229, 152, 51);
     padding: 0.5rem 0;
     width: 10rem;
-    
 }
 
 .carrito:hover{

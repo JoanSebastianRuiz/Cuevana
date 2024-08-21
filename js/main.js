@@ -68,7 +68,10 @@ const cargarPeliculasPopular = async () =>{
                 `<li class="peliculaPopular">
                 <img class="imagenPopular" onclick="informacionPelicula(${pelicula.id})" src=https://image.tmdb.org/t/p/w500/${pelicula["poster_path"]}>
                 </li>`;
-            } 
+            }
+            peliculasPopular.classList.toggle("productosCarrito", false);
+            peliculasPopular.classList.toggle("peliculaInformacion", false);
+            peliculasPopular.classList.toggle("peliculasPopular", true); 
             peliculasPopular.innerHTML=elementosInsertar; 
         }
     } catch(error){
@@ -163,7 +166,9 @@ const informacionPelicula = async (idPelicula) =>{
         if (respuesta.ok){
             let datos = await respuesta.json();
             console.log(datos);
-            peliculasPopular.classList.replace("peliculasPopular", "peliculaInformacion");
+            peliculasPopular.classList.toggle("productosCarrito", false);
+            peliculasPopular.classList.toggle("peliculaInformacion", true);
+            peliculasPopular.classList.toggle("peliculasPopular", false);
 
             peliculasPopular.innerHTML=
             `
@@ -244,7 +249,9 @@ const verCarrito = async()=>{
     </li>
     `;
 
-    peliculasPopular.classList.replace("peliculasPopular", "productosCarrito");
+    peliculasPopular.classList.toggle("productosCarrito", true);
+    peliculasPopular.classList.toggle("peliculaInformacion", false);
+    peliculasPopular.classList.toggle("peliculasPopular", false);
     peliculasPopular.innerHTML=elementosInsertar;
     subtituloPopulares.textContent="Cart";
     subtituloPopulares.classList.add("tituloInformacion");
