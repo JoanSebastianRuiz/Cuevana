@@ -5,7 +5,7 @@ E-commerce de peliculas realizado mediante HTML, CSS y JavaScript obteniendo la 
 
 ## Tabla de contenido 📋
 
-- [Visualización](#comenzando-)
+- [Visualización](#visualización-)
 - [Maquetación visual](#maquetación-visual-%EF%B8%8F)
 - [Funcionamiento](#funcionamiento-%EF%B8%8F)
 - [Construido con](#construido-con-%EF%B8%8F)
