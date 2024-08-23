@@ -173,14 +173,16 @@ const informacionPelicula = async (idPelicula) =>{
             peliculasPopular.innerHTML=
             `
             <img class="imagenInformacion" src=https://image.tmdb.org/t/p/w500/${datos.poster_path}>
-            <div>
-            <h2 class="texto">Release date</h2>
-            <p class="texto">${datos.release_date}</p>
-            <h2 class="texto">Overview</h2>
-            <p class="texto">${datos.overview}</p>
-            <h2 class="texto">Genre</h2>
-            <p class="texto">${datos.genres[0].name}</p>
-            <button class="carrito" onclick="agregarCarrito(${idPelicula})" >Add to cart</button>
+                <div class="contenedorInformacion">
+                <h2 class="texto">Release date</h2>
+                <p class="texto">${datos.release_date}</p>
+                <h2 class="texto">Overview</h2>
+                <p class="texto">${datos.overview}</p>
+                <h2 class="texto">Genre</h2>
+                <p class="texto">${datos.genres[0].name}</p>
+                <div class="contenedorBotonCarrito">
+                    <button class="carrito" onclick="agregarCarrito(${idPelicula})" >Add to cart</button>
+                </div>
             </div>`;
 
             subtituloPopulares.textContent=datos.title;
